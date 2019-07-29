@@ -1,24 +1,26 @@
-<!--
-android:layout_weight 余白を割り振り
--->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
     <Button
-        android:layout_weight="1"
+        android:id="@+id/a"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/hello_word" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="A" />
     <Button
-        android:layout_weight="1"
+        android:id="@+id/b"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/hello_world" />
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/a"
+        android:layout_below="@+id/a"
+        android:text="B" />
     <Button
-        android:layout_weight="3"
+        android:id="@+id/c"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/hello_world" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/b"
+        android:layout_toRightOf="@+id/b"
+        android:layout_marginLeft="20dp"
+        android:text="C" />
+</RelativeLayout>　
